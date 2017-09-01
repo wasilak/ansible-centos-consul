@@ -1,0 +1,16 @@
+---
+consul_version: "0.9.2"
+filename: "consul_{{ consul_version }}_linux_amd64.zip"
+download_url: "https://releases.hashicorp.com/consul/{{ consul_version }}/{{ filename }}"
+consul_user: "consul"
+consul_group: "consul"
+executable_location: "/usr/bin/consul"
+datacenter: "default"
+data_dir: "/var/lib/consul"
+is_server: true
+ui: true
+client_addr: "0.0.0.0"
+bind_addr: "{{ ansible_ssh_host }}"
+cluster:
+  servers: [ "{{ bind_addr }}" ]
+  clients: []

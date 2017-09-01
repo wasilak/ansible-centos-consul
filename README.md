@@ -1,0 +1,7 @@
+Centos Consul
+=========
+
+License
+-------
+
+MIT
